@@ -46,14 +46,14 @@
       </header>
       <br>
       <div class="container w-25 bg-light my-5">
-        <form method="GET"  action="#" onclick="return checkemail()">
+        <form method="GET"  action="/mailer" onsubmit="return valiDation()">
           <div class="mb-3" >
               <label for="name" class="form-label">Email id</label>
               <input type="text" class="form-control" id="email" aria-describedby="firstName" name="authorname" placeholder="Enter a vailed Email ID">
               <span id="error1"></span>
             </div>
         
-          <button type="submit" id="button1" class="btn btn-dark" >Send Mail</button>
+          <button type="submit" id="button1" class="btn btn-dark" onclick="mailer.ejs" >Send Mail</button>
         </form>
       </div>
 
@@ -74,5 +74,7 @@
         </div>
         <!-- Copyright -->
       </footer>
+      <script src="js/login.js"></script>
 </body>
+
 </html>

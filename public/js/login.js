@@ -1,3 +1,7 @@
+
+function valiDation(){
+
+
 email=document.getElementById('email');
 
 error1=document.getElementById('error1');
@@ -6,7 +10,6 @@ error1=document.getElementById('error1');
 
 var re = /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+)\.([a-z]{2,3})(\.[a-z]{2,3})?$/;
 
-function checkemail(){
      if(email.value.trim()==""){
         error1.innerHTML="Error:please fillout this field";
         email.style.border="2px solid red";

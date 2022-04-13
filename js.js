@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const nodemailer = require('nodemailer');
 
 const nav = [
     {link:'/home',name:'Home'},
