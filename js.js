@@ -1,3 +1,25 @@
+const express = require('express');
+const app = express();
+
+const nav = [
+    {link:'/home',name:'Home'},
+    {link:'/mailer',name:'Mailer'},
+    
+ ];
+
+app.use(express.static('./public'));
+app.set('view engine','ejs');
+app.set('views',__dirname+'/src/views');
+
+app.get('/',function(req,res){
+  res.render("index",{
+    nav,
+    title:'Main'
+  });
+ });
+
+app.listen(process.env.PORT || 7000);
+
 //server creation
 /*
 var http = require("http");
@@ -9,7 +31,7 @@ server.listen(3333);
 */
 
 // plane request
-
+/*
 var http = require("http");
 var server = http.createServer(function(req,res){
    if(req.url ==="/"){//request.url is header{
@@ -26,3 +48,5 @@ var server = http.createServer(function(req,res){
 });
 server.listen(2000);
 console.log("the srver is ready at port :2000");
+*/
+
