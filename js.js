@@ -11,12 +11,20 @@ app.use(express.static('./public'));
 app.set('view engine','ejs');
 app.set('views',__dirname+'/src/views');
 
+const homeRouter = require('./src/router/homeRoutes')(nav)
+const mailRouter = require('./src/router/mailerRoutes')(nav)
+
+app.use('/home',homeRouter);//we use app.use because what ever comes after /book/ it should route to books page
+app.use('/mailer',mailRouter);
+
 app.get('/',function(req,res){
   res.render("index",{
     nav,
     title:'Main'
   });
  });
+
+
 
 app.listen(process.env.PORT || 7000);
 
