@@ -1,13 +1,21 @@
 {
-  "name": "codingpractise",
+  "name": "practise",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Practise",
+  "main": "js.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "alna",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlnaLouis/practise.git"
+  },
+  "author": "Alna",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlnaLouis/practise/issues"
+  },
+  "homepage": "https://github.com/AlnaLouis/practise#readme",
   "dependencies": {
     "express": "^4.17.3"
   }
